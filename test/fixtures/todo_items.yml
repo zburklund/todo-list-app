@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  position: 1
+  title: MyString
+  is_done: false
+  todo_list: one
+
+two:
+  position: 1
+  title: MyString
+  is_done: false
+  todo_list: two
