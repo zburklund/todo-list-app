@@ -1,6 +1,6 @@
 <%= form_for([@todo_list, @todo_list.todo_items.build]) do |f| %>
-	<%= f.text_field :position, placeholder: "##" %>
+	<%= f.text_field :position, placeholder: "##", style: "display: none;" %>
 	<%= f.text_field :title, placeholder: "New Item" %>
-	<%= f.text_field :is_done, placeholder: "true" %>
+	<%= f.text_field :is_done, value: "false", placeholder: "Boolean", style: 'display: none;' %>
 	<%= f.submit %>
 <% end %>
