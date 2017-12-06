@@ -9,12 +9,12 @@ class TodoItemsController < ApplicationController
 	end
 
 	def destroy
-		if @todo_item.destroy
-			flash[:success] = "Todo List item was deleted."
-		else
-			flash[:error] = "Todo List item could not be deleted."
+		@todo_item.destroy
+		respond_to do |format|
+			format.html { redirect_to @todo_list, notice: 'Item was successfully destroyed.' }
+			format.json { head :no_content }
+			format.js   { render :layout => false }
 		end
-		redirect_to @todo_list
 	end
 
 	def complete
