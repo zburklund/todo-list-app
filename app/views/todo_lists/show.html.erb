@@ -4,7 +4,18 @@
 <p><%= @todo_list.description %></p>
 
 <div id="todo_items_wrapper">
-	<%= render @todo_list.todo_items %>
+	<table class="table">
+	    <thead>
+	        <tr>
+	            <th>Mark Complete</th>
+	            <th>Description</th>
+	            <th>Delete</th>
+	        </tr>
+	    </thead>
+	    <tbody>
+	        <%= render @todo_list.todo_items %>
+	    </tbody>
+	</table>
 	<div id="form">
 		<%= render "todo_items/form" %>
 	</div>
