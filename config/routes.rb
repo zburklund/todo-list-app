@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   	resources :todo_items do
   		member do
   			patch :complete
+  			patch :move_up
+  			patch :move_down
   		end
   	end
   end
